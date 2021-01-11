@@ -1,4 +1,5 @@
-# Ruby on Aire
+![Ruby on Aire](Graphics/Ruby%20on%20AIRE%20logo.png?raw=true)
+
 ## License
 
    Unless otherwise specfied, this project is licensed under the Apache License, Version 2.0 (the "License");

@@ -1,4 +1,4 @@
-![Ruby on Aire](Graphics/Ruby%20on%20AIRE%20logo.png?raw=true)
+![Ruby on Aire](graphics/Ruby-on-Aire-logo.png?raw=true)
 
 ## License
 

@@ -16,38 +16,33 @@
 
 module Aire
 
-  # Produces and formats the "About Ruby-on-Aire" page.
+  # Produces the HTML source for the "About Ruby-on-Aire" page.
   #
-  # returns a string comprising the HTML body of the page.
+  # This is set up as an Aire::Cell with a constant value.
   # 
-  class About
-  
-    def call
-      self.toString
-    end
+  class About << Aire::Cell   
     
-    # toString does the work of composing the About page, as a here-document.
-    #
-    def toString 
-      return <<-EOD
-      <div id="heading">
-        <img id="logo" alt="logo" src="#{logo-ref}" style="float: left; margin-right: 2em; height: 8em" />
-        <h1>Ruby on Aire<br/><span style="font-size: 60%">version #{version-ref}</span></h1>
-      </div>
-      # todo: additional information
-      EOD
+    def initialize
+      value = <<-EOD
+        <div id="heading">
+          <img id="logo" alt="logo" src="#{logo_ref}" style="float: left; margin-right: 2em; height: 8em" />
+          <h1>Ruby on Aire<br/><span style="font-size: 60%">version #{version_ref}</span></h1>
+        </div>
+        # todo: additional information
+        EOD
+      end
     end
     
     private
     
     # provides a URL reference to the logo to be displayed on the About page
     #
-    def logo-ref
+    def logo_ref
       "graphics/Ruby-on-Aire-logo.png"
     end
     
     # provides a URL reference to the version number for this version
-    def version-ref
+    def version_ref
       "VERSION"
     end
     

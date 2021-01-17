@@ -21,7 +21,7 @@ module Aire
   #
   class Server
   
-    def call (env)
+    def self.call (env)
       # For now, just return the About page.
       [ 200, {"Content-Type" => "text/plain"}, [Aire::About.value] ]
     end

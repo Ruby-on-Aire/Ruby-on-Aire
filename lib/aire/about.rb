@@ -20,20 +20,7 @@ module Aire
   #
   # The page is returned via the "value" attribute. This may change.
   # 
-  class About << Aire::Cell   
-    
-    @@value ||= <<-EOD
-        <div id="heading">
-          <img id="logo" alt="logo" src="#{logo_ref}" style="float: left; margin-right: 2em; height: 8em" />
-          <h1>Ruby on Aire<br/><span style="font-size: 60%">version #{version}</span></h1>
-        </div>
-        # todo: additional information
-        EOD
-
-    def self.value
-       @@value
-      end
-    end
+  class About   
     
     private
     
@@ -44,9 +31,21 @@ module Aire
     end
     
     # provides a URL reference to the version number for this version
-    def self.version_ref
+    def self.version
       "0.0.0"
     end
-    
+    @@value ||= <<-EOD
+        <div id="heading">
+          <img id="logo" alt="logo" src="#{self.logo_ref}" style="float: left; margin-right: 2em; height: 8em" />
+          <h1>Ruby on Aire<br/><span style="font-size: 60%">version #{self.version}</span></h1>
+        </div>
+        EOD
+
+    public
+
+    def self.value
+      @@value
+    end
+
   end #About
 end #Aire 

@@ -23,7 +23,11 @@ module Aire
   
     def self.call (env)
       # For now, just return the About page.
-      [ 200, {"Content-Type" => "text/plain"}, [Aire::About.value] ]
+      [ 200, {"Content-Type" => "text/html"}, [self.html_page(Aire::About.value)] ]
+    end
+
+    def self.html_page(head="",body)
+      "<html><head>#{head}</head><body>#{body}</body></html>"
     end
   
   end # Server

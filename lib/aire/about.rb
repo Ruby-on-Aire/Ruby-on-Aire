@@ -27,7 +27,7 @@ module Aire
     # provides a URL reference to the logo to be displayed on the About page
     #
     def self.logo_ref
-      "https://github.com/Ruby-on-Aire/Ruby-on-Aire/blob/main/graphics/Ruby-on-Aire-logo.png"
+      "https://raw.githubusercontent.com/Ruby-on-Aire/Ruby-on-Aire/main/graphics/Ruby-on-Aire-logo.png?token=ASKRCNHBJKQ34EGYRRDN4NTAA56T2"
     end
     
     # provides a URL reference to the version number for this version

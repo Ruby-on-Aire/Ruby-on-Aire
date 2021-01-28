@@ -21,9 +21,13 @@
 # so it should be enough just to <tt>require 'aire'</tt> in your code.
 
 module Aire
-
+  
+  require "aire/exceptions"  
+  
   autoload :Cell, "aire/cell"
-  autoload :About, "aire/about"
   autoload :Server, "aire/server"
+  autoload :Value, "aire/value"
+  
+  autoload :About, "aire/about"
 
 end # Aire
